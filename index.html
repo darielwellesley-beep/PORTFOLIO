@@ -26,7 +26,6 @@
             line-height: 1.6;
         }
 
-        /* Background Deco */
         .bg-glow {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -35,7 +34,6 @@
             opacity: 0.5;
         }
 
-        /* Header */
         header {
             text-align: center;
             padding: 80px 20px 40px;
@@ -51,7 +49,7 @@
 
         .logo-box img {
             height: 40px;
-            filter: invert(1); /* ปรับโลโก้ให้เป็นสีดำบนพื้นขาว */
+            filter: invert(1);
         }
 
         h1 {
@@ -68,7 +66,6 @@
             letter-spacing: 2px;
         }
 
-        /* Portfolio Grid */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -81,7 +78,6 @@
             gap: 30px;
         }
 
-        /* Work Card */
         .work-card {
             background: var(--card-bg);
             border: 1px solid #222;
@@ -164,7 +160,6 @@
             border-color: #fff;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 60px 20px;
@@ -174,7 +169,6 @@
             font-size: 0.8rem;
         }
 
-        /* Responsive */
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
             .portfolio-grid { grid-template-columns: 1fr; }
@@ -203,49 +197,49 @@
     </footer>
 
     <script>
-        // --- ข้อมูลผลงาน (แก้ไขตรงนี้) ---
+        // --- ข้อมูลผลงานจากลิงก์ที่คุณให้มา ---
         const works = [
             {
-                title: "Cinematic Montage #1",
-                category: "Video Editing",
-                desc: "ผลงานตัดต่อวิดีโอ Cinematic สำหรับเปิดตัวทีม เน้นโทนสีดุดันและการตัดต่อตามจังหวะเพลง",
-                img: "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80",
-                link: "#"
+                title: "ARBAR Project",
+                category: "Web Application",
+                desc: "แพลตฟอร์มเว็บแอปพลิเคชันที่เน้นดีไซน์เรียบหรูและระบบการจัดการที่รวดเร็ว",
+                img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+                link: "https://arbar.netlify.app/"
             },
             {
-                title: "DYS Website Redesign",
-                category: "Web Design",
-                desc: "การออกแบบ UI/UX เว็บไซต์ใหม่ของกลุ่ม เน้นความทันสมัย ใช้งานง่าย และรองรับมือถือ 100%",
-                img: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80",
-                link: "#"
+                title: "Dern Reang Club",
+                category: "Community Site",
+                desc: "เว็บไซต์สำหรับรวบรวมกลุ่มและคลับต่างๆ เพื่อการสื่อสารและการทำกิจกรรมร่วมกัน",
+                img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+                link: "https://dernreangclub.netlify.app/"
             },
             {
-                title: "Community Tournament",
-                category: "Event",
-                desc: "ภาพบรรยากาศและการจัดการแข่งขันภายในกลุ่ม มีผู้เข้าร่วมมากกว่า 50 คน",
-                img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
-                link: "#"
+                title: "Ded Kor Don Style",
+                category: "Branding Web",
+                desc: "โปรเจกต์แสดงตัวตนและไลฟ์สไตล์ที่เป็นเอกลักษณ์ผ่านหน้าเว็บสุดล้ำ",
+                img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+                link: "https://dedkordonstyle.netlify.app/"
             },
             {
-                title: "Graphic Identity",
-                category: "Branding",
-                desc: "ออกแบบชุดโลโก้และฟอนต์ประจำปี 2026 เพื่อสร้างภาพจำใหม่ให้แบรนด์ DYS",
-                img: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80",
-                link: "#"
+                title: "DCL Delta",
+                category: "Modern UI",
+                desc: "งานดีไซน์ส่วนต่อประสานผู้ใช้ที่เน้นความทันสมัยและการใช้สีสันที่โดดเด่น",
+                img: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
+                link: "https://dcl-delta.netlify.app/"
             },
             {
-                title: "Motion Graphics",
-                category: "Animation",
-                desc: "กราฟิกเคลื่อนไหวสำหรับใช้ในสตรีมสด (Stream Overlay) เพื่อความมืออาชีพ",
-                img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
-                link: "#"
+                title: "DYS MyList",
+                category: "Directory / Tool",
+                desc: "ระบบจัดการรายการและฐานข้อมูลส่วนตัวที่ออกแบบมาเพื่อสมาชิก DYS โดยเฉพาะ",
+                img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
+                link: "https://dys-mylist.netlify.app/"
             }
         ];
 
         function renderWorks() {
             const grid = document.getElementById('portfolioGrid');
             grid.innerHTML = works.map(work => `
-                <a href="${work.link}" class="work-card">
+                <a href="${work.link}" target="_blank" class="work-card">
                     <div class="work-img">
                         <img src="${work.img}" alt="${work.title}">
                     </div>
@@ -254,14 +248,13 @@
                         <h2 class="work-title">${work.title}</h2>
                         <p class="work-desc">${work.desc}</p>
                         <div class="btn-view">
-                            VIEW PROJECT <i class="fas fa-arrow-right"></i>
+                            VISIT WEBSITE <i class="fas fa-external-link-alt"></i>
                         </div>
                     </div>
                 </a>
             `).join('');
         }
 
-        // เรียกใช้งานฟังก์ชัน
         renderWorks();
     </script>
 </body>
