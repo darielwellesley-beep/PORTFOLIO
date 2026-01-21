@@ -13,6 +13,7 @@
             --card-bg: #151515;
             --accent: #ffffff;
             --text-gray: #a0a0a0;
+            --discord-color: #5865F2;
             --font-title: 'Orbitron', sans-serif;
             --font-body: 'Kanit', sans-serif;
         }
@@ -64,8 +65,32 @@
             color: var(--text-gray);
             font-weight: 300;
             letter-spacing: 2px;
+            margin-bottom: 25px;
         }
 
+        /* --- Discord Header Button --- */
+        .discord-btn-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--discord-color);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-family: var(--font-title);
+            font-size: 0.8rem;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .discord-btn-header:hover {
+            background: #4752c4;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(88, 101, 242, 0.4);
+        }
+
+        /* --- Portfolio Grid --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -108,13 +133,7 @@
             transition: transform 0.5s;
         }
 
-        .work-card:hover .work-img img {
-            transform: scale(1.1);
-        }
-
-        .work-info {
-            padding: 25px;
-        }
+        .work-info { padding: 25px; }
 
         .work-category {
             font-family: var(--font-title);
@@ -156,8 +175,29 @@
             transition: 0.3s;
         }
 
-        .work-card:hover .btn-view {
-            border-color: #fff;
+        /* --- Floating Discord Button --- */
+        .discord-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--discord-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .discord-float:hover {
+            transform: rotate(360deg) scale(1.1);
+            background: #4752c4;
         }
 
         footer {
@@ -172,6 +212,7 @@
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
             .portfolio-grid { grid-template-columns: 1fr; }
+            .discord-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 20px; }
         }
     </style>
 </head>
@@ -179,12 +220,20 @@
 
     <div class="bg-glow"></div>
 
+    <a href="https://discord.gg/PSzDAST75x" target="_blank" class="discord-float" title="Join our Discord">
+        <i class="fab fa-discord"></i>
+    </a>
+
     <header>
         <div class="logo-box">
             <img src="https://img2.pic.in.th/a479b75c-4908-4b85-82ea-92707086f4cf.png" alt="Logo">
         </div>
         <h1>WORKS</h1>
         <p class="subtitle">PROJECT SHOWCASE & CREATIONS</p>
+        
+        <a href="https://discord.gg/PSzDAST75x" target="_blank" class="discord-btn-header">
+            <i class="fab fa-discord"></i> LINK DISCORD
+        </a>
     </header>
 
     <div class="container">
@@ -197,10 +246,8 @@
     </footer>
 
     <script>
-        // รูปโปรไฟล์/หน้าปกที่คุณต้องการใช้กับทุกอัน
         const defaultCover = "https://img5.pic.in.th/file/secure-sv1/ChatGPT-Image-21-..-2569-18_50_45.png";
 
-        // --- ข้อมูลผลงานพร้อมลิงก์เว็บไซต์ ---
         const works = [
             {
                 title: "ARBAR Project",
